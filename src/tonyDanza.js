@@ -5,10 +5,7 @@ var makeTonyDanza = function(top, left, timeBetweenSteps){
 
   //this allows the dancer to be display on the dance floor, not sure why
   this.oldStep = this.step;
-  // this.step = this.step;
-
-	this.$node.addClass('tonyDanza');
-	$('class').css('color' : '#000000');
+  this.$node = $('<img class="dancer tonyDanza" src="/Users/student/Desktop/dancer/2015-06-subclass-dance-party/styles/danza.gif"></img>');
 
 };
 
@@ -18,7 +15,11 @@ makeTonyDanza.prototype = Object.create(Dancer.prototype);
 //this defines the dance move of blinky dancer.
 makeTonyDanza.prototype.step = function() {  
   Dancer.prototype.step.call(this);
-
   this.$node.toggle();
+  this.$node.toggle();
+
+};
+
+makeTonyDanza.prototype.lineUp = function() {
 
 };

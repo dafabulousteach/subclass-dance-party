@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Object Dance Party</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
     <script src="lib/jquery.js"></script>
     <script src="src/dancer.js"></script>
     <script src="src/blinkyDancer.js"></script>
@@ -11,11 +11,22 @@
   </head>
   <body>
 
+      <audio controls>
+      <!-- <audio autoplay = 'autoplay'> -->
+       <source src="0a921da55ea2aba4b3af1123ba9bcf7a.mp3" type='audio/mpeg'>
+      <p>Your browser does not support the</p>
+      </audio>
+      
     <div class="topbar">
+      <!-- </audio> -->
       <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeTonyDanza">add a Tony dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeShakira">add a Shakira</a>    </div>
+
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">Add a Robot Dancer</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeTonyDanza">Add a Tony Danza</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeShakira">Add a Shakira</a>   
+      <a href ="#" class="lineUpButton" data-dancer-maker-function-name="lineUpDancer">Line Up</a>
+
+      </div>
 
     <script src="src/init.js"></script>
   </body>

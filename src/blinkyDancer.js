@@ -5,8 +5,7 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps){
 
   //this allows the dancer to be display on the dance floor, not sure why
   this.oldStep = this.step;
-  // this.step = this.step;
-  this.$node.addClass('blinkyDancer');
+  this.$node = $('<span><img class="dancer robot" src="http://media.giphy.com/media/M0ykNsmtmviec/giphy.gif"></img></span>');
 
 };
 
@@ -19,3 +18,7 @@ makeBlinkyDancer.prototype.step = function() {
   this.$node.toggle();
 
 };
+
+// blinkyDancer.prototype.lineUp = function() {
+
+// };

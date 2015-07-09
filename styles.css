@@ -31,29 +31,22 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 
-.dancer{
+/*.dancer{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
-}
+}*/
 
-.blinkyDancer{
-  border:10px solid blue;
+.dancer.robot{
   border-radius:10px;
+  position:relative;
+}
 
+.dancer.tonyDanza{
   position:absolute;
 }
 
-.tonyDanza{
-  border:10px solid pink;
-  border-radius:10px;
+.dancer .shakira{
   position:absolute;
-}
-
-.shakira{
-  border:100px;
-  position:absolute;
-  border-image: url("http://media.giphy.com/media/nNOuejcrgQ3eg/giphy.gif");
-  border-image-slice: inherit;
 }
 

@@ -22,13 +22,22 @@ $(document).ready(function(){
 
     // make a dancer with a random position
 
-    var dancer = new dancerMakerFunction(
+    var shakira = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
-    console.log(dancer);
-    $('body').append(dancer.$node);
+
+
+    $('body').append(shakira.$node);
+  });
+
+  $(".lineUpDancer").on("click", function(event){
+    
+
+    for(var i = 0; i < dancers.length; i++){
+      $(body).append(shakira.$node);
+  }
   });
 });
 

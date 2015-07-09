@@ -11,7 +11,7 @@ var Dancer = function(top, left, timeBetweenSteps){
   this.timeBetweenSteps = timeBetweenSteps;
   
   //this sets the node on the DOM to have a span tag
-  this.$node = $('<span class="dancer"></span>');
+  this.$node = $('<span img class="dancer"></img></span>');
 
   //invokes the setPosition method, which assigns a position to the dancer
   this.setPosition(top, left);
@@ -41,5 +41,8 @@ Dancer.prototype.step = function(){
   //bind, bind the (this) object to the function
   //(this) represents the object being passed in, (in our case this is a type of dancer that calls this function. I think this is true)
   setTimeout(this.step.bind(this), this.timeBetweenSteps);
-}
+};
 
+Dancer.prototype.lineUp = function() {
+
+};
