@@ -1,27 +1,59 @@
 body, html{
   height:100%;
 }
+
+
 body{
-  margin: 0px;
-  background-color:#444;
+  margin: 100px;
+  background: url('http://media.giphy.com/media/Lhc78evgj1xLO/giphy.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
   font-size: 18px;
 }
+
+/*hyper link colors*/
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
+
+
 .title, .addDancerButton{
   padding:5px 12px;
   float:right;
 }
+
 .topbar{
   height:32px;
   background-color: #555;
 }
+
 .title{
   background-color: #777;
 }
+
 .dancer{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
 }
+
+.blinkyDancer{
+  border:10px solid blue;
+  border-radius:10px;
+
+  position:absolute;
+}
+
+.tonyDanza{
+  border:10px solid pink;
+  border-radius:10px;
+  position:absolute;
+}
+
+.shakira{
+  border:100px;
+  position:absolute;
+  border-image: url("http://media.giphy.com/media/nNOuejcrgQ3eg/giphy.gif");
+  border-image-slice: inherit;
+}
+
