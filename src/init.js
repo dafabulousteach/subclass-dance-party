@@ -1,3 +1,5 @@
+
+
 $(document).ready(function(){
   window.dancers = [];
 
@@ -22,22 +24,24 @@ $(document).ready(function(){
 
     // make a dancer with a random position
 
-    var shakira = new dancerMakerFunction(
+    var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
 
-
-    $('body').append(shakira.$node);
+    dancers.push(dancer);
+    $('body').append(dancer.$node);
   });
 
   $(".lineUpDancer").on("click", function(event){
-    
-
+    console.log('lineUpDancer has been called');
     for(var i = 0; i < dancers.length; i++){
-      $(body).append(shakira.$node);
-  }
+      window.dancers[i].setPosition(window.dancers[i].top, 0);
+    }
+  });
+
+  $(".rotateTony").on("click", function(event){
+    console.log('Tony has been clicked');
   });
 });
-

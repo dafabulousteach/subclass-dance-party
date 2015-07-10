@@ -1,5 +1,4 @@
-// Creates and returns a new dancer object that can step
-var Dancer = function(top, left, timeBetweenSteps){
+var Dancer = function(top, left, timeBetweenSteps, angle){
   
   //this sets the left property of the dancer the to left argument
   this.left = left;
@@ -9,15 +8,18 @@ var Dancer = function(top, left, timeBetweenSteps){
   
   //this sets the time property of the dancer the to time argument
   this.timeBetweenSteps = timeBetweenSteps;
+
+  this.angle = angle;
   
   //this sets the node on the DOM to have a span tag
-  this.$node = $('<span img class="dancer"></img></span>');
+  this.$node = $('<span class="dancer"></span>');
 
   //invokes the setPosition method, which assigns a position to the dancer
-  this.setPosition(top, left);
   
+  this.setPosition(top, left);  
   //invokes the step method, which tells the dancer when to move
   this.step();
+  this.rotate(angle);
 
 };
 
@@ -28,21 +30,21 @@ Dancer.prototype.setPosition = function(top, left){
     top: top,
     left: left
   };
-
   //this adds styling to the dancer via the styling sheet
+  
   this.$node.css(styleSettings);
+
   
 };
 
-
 Dancer.prototype.step = function(){
-
+ 
   //this.step represents the function
   //bind, bind the (this) object to the function
   //(this) represents the object being passed in, (in our case this is a type of dancer that calls this function. I think this is true)
   setTimeout(this.step.bind(this), this.timeBetweenSteps);
 };
 
-Dancer.prototype.lineUp = function() {
-
+Dancer.prototype.rotate = function(angle){
+  setTimeout(this.rotate.bind(this, this.timeBetweenSteps))
 };
