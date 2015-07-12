@@ -1,27 +1,25 @@
-var makeBlinkyDancer = function(top, left, timeBetweenSteps){
-  
-  //this allows makeBlinkyDancer to inherit the properties of Dancer
-  Dancer.call(this, top, left, timeBetweenSteps);
-  // console.log('top ', this.top, 'this.left', this.left);
-
-  this.$node = $('<span class="blinkyDancer"></span>');
-  this.setPosition(top, left);
-  
-  //this allows the dancer to be display on the dance floor, not sure why
-  this.oldStep = this.step;
+var BlinkyDancer = function(top, left, timeBetweenSteps){
+  Dancer.call(this, arguments);
+  this.$node = $('<span class = "dancer"><img src = "http://media.giphy.com/media/SwenV3OsGZmec/giphy.gif"></span>');
 };
 
-//allows blinkyDancer to inherit the methods of dancer
-makeBlinkyDancer.prototype = Object.create(Dancer.prototype);
+BlinkyDancer.prototype = Object.create(Dancer.prototype);
+BlinkyDancer.prototype.constructor = BlinkyDancer;
+var blinkyDancer = new BlinkyDancer;
 
-//this defines the dance move of blinky dancer.
-makeBlinkyDancer.prototype.step = function() {  
+BlinkyDancer.prototype.step = function(top, left){
   Dancer.prototype.step.call(this);
-  this.$node.toggle();
-}; 
+  this.$node.toggle;
+};
 
-makeBlinkyDancer.prototype.setPosition = function(top, left){
-  Dancer.prototype.setPosition.call(this, top, left);
+var makeBlinkyDancer = function(){
+  var blinkyDancer = makeDancer(top, left. timeBetweenSteps);
+  var oldStep = blinkyDancer.step;
 
+  blinkyDancer.step = function(){
+    oldStep();
+    blinkyDancer.$node.toggle();
+  }
+return blinkyDancer;
 };
 

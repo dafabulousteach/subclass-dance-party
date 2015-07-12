@@ -1,50 +1,36 @@
-var Dancer = function(top, left, timeBetweenSteps, angle){
-  
-  //this sets the left property of the dancer the to left argument
-  this.left = left;
-  
-  //this sets the top property of the dancer the to top argument
+var Dancer = function(top, left, timeBetweenSteps){
   this.top = top;
-  
-  //this sets the time property of the dancer the to time argument
-  this.timeBetweenSteps = timeBetweenSteps;
-
-  this.angle = angle;
-  
-  //this sets the node on the DOM to have a span tag
+  this.left = left;
+  this._timeBetweenSteps = timeBetweenSteps;
   this.$node = $('<span class="dancer"></span>');
-
-  //invokes the setPosition method, which assigns a position to the dancer
-  
-  this.setPosition(top, left);  
-  //invokes the step method, which tells the dancer when to move
   this.step();
-  this.rotate(angle);
-
+  this.setPosition(top, left);
 };
+// DEFINE THE CONSTRUCTOR
+Dancer.prototype.constructor = Dancer;
 
+// DEFINE THE METHODS
 Dancer.prototype.setPosition = function(top, left){
-
-//this sets the position of the dancer
   var styleSettings = {
     top: top,
     left: left
   };
-  //this adds styling to the dancer via the styling sheet
-  
   this.$node.css(styleSettings);
-
-  
 };
 
 Dancer.prototype.step = function(){
- 
-  //this.step represents the function
-  //bind, bind the (this) object to the function
-  //(this) represents the object being passed in, (in our case this is a type of dancer that calls this function. I think this is true)
-  setTimeout(this.step.bind(this), this.timeBetweenSteps);
-};
+  console.log('Dancer is stepping!');
+  setTimeout(function(){
+    this.step();
+  }, this._timeBetweenSteps);
+}
 
-Dancer.prototype.rotate = function(angle){
-  setTimeout(this.rotate.bind(this, this.timeBetweenSteps))
-};
+Dancer.proto
+//  Dancer.prototype.makeFunPants = function(){
+//   this.funPants = 'pink';
+//   console.log('I have fun pants!');
+// }
+
+// Dancer.prototype.rotate = function(){
+//   console.log('rotate has been called');
+// };
